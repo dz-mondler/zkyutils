@@ -8,15 +8,15 @@ with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
-    name="pgzero_template",
+    name="zkyutils",
     version=zkyutils.__version__,
-    author="xiaofengkz",
-    author_email="xiaofengkz@163.com",
-    description="a template for pgzero",
+    author="zky",
+    author_email="2221831747@qq.com",
+    description="自用python工具类",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
-    url="https://github.com/zhec5hl01/python-games",
+    url="https://github.com/dz-mondler/zkyutils",
     py_modules=['zkyutils'],
     install_requires=[
         "loguru <= 0.7.2",
