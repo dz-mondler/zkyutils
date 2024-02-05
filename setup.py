@@ -4,12 +4,14 @@ from __future__ import print_function
 from setuptools import setup, find_packages
 import zkyutils
 
+__version__ = '1.0.2'
+
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
 
 setup(
     name="zkyutils",
-    version=zkyutils.__version__,
+    version=__version__,
     author="zky",
     author_email="2221831747@qq.com",
     description="自用python工具类",
@@ -17,7 +19,7 @@ setup(
     long_description_content_type="text/markdown",
     license="MIT",
     url="https://github.com/dz-mondler/zkyutils",
-    py_modules=['zkyutils'],
+    packages=find_packages(),
     install_requires=[
         "loguru <= 0.7.2",
         "pandas <= 1.1.5",

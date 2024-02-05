@@ -1,0 +1,5 @@
+.pypric
+dist
+build
+zkyutils.egg-info
+zkyutils/__pycache__

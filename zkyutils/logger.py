@@ -95,3 +95,6 @@ class MyLogger:
             return wrapper
 
         return decorator
+
+
+log = MyLogger()
