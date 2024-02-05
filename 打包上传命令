@@ -1,2 +1,2 @@
 python setup.py sdist bdist_wheel
-python -m twine upload dist/* -path C:/Project/python_utils/zkyutils
+python -m twine upload dist/* --config-file C:\Project\python_utils\zkyutils\.pypric

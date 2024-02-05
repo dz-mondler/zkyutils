@@ -2,9 +2,8 @@
 # -*- coding:utf-8 -*-
 from __future__ import print_function
 from setuptools import setup, find_packages
-import zkyutils
 
-__version__ = '1.0.2'
+__version__ = '1.0.4'
 
 with open("README.md", "r", encoding='utf-8') as fh:
     long_description = fh.read()
