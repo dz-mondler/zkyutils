@@ -16,8 +16,8 @@ session.mount('https://', adapter)
 
 
 @log.log_decorator('网络请求')
-def z_request(method, url, headers, payload, resp_json=False):
-    resp = session.request(method, url, headers=headers, data=payload)
+def z_request(method, url, headers, data, resp_json=True):
+    resp = session.request(method, url, headers=headers, data=data)
     if not resp_json:
         return {'success': True, 'msg': '', 'data': resp.text}
     try:
