@@ -63,7 +63,7 @@ class MyLogger:
     def __getattr__(self, level: str):
         return getattr(self.logger, level)
 
-    def log_decorator(self, msg="执行方法异常"):
+    def log_decorator(self, msg="执行方法描述", log_msg=False):
         """
          日志装饰器，记录函数的名称、参数、返回值、运行时间和异常信息
     Args:
@@ -80,6 +80,8 @@ class MyLogger:
 
                 start = perf_counter()  # 开始时间
                 try:
+                    if log_msg:
+                        self.logger.info(msg)
                     result = func(*args, **kwargs)
                     # end = perf_counter()  # 结束时间
                     # duration = end - start

@@ -15,6 +15,28 @@ def read(filename, headers):
     return result_list
 
 
+def read_with_all_header(filename, merge_sheet=False):
+    results = []
+    engine = 'openpyxl'
+    if filename[-3:] == 'xls':
+        engine = 'xlrd'
+    df = pd.ExcelFile(filename, engine=engine)
+
+    if len(df.sheet_names) > 1 and not merge_sheet:
+        results = {}
+        for sheet in df.sheet_names:
+            results[sheet] = []
+
+    for sheet in df.sheet_names:
+        df_data = pd.read_excel(df, sheet, engine=engine)
+        headers = df_data.columns.tolist()
+        if len(df.sheet_names) > 1 and not merge_sheet:
+            results[sheet].extend(df_to_list(df_data, headers))
+        else:
+            results.extend(df_to_list(df_data, headers))
+    return results
+
+
 def write(filename, data_list, headers):
     # 初始化写入信息
     result_data = {}
