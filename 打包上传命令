@@ -1,3 +1,3 @@
 python setup.py sdist bdist_wheel
 python -m twine upload dist/* --config-file C:\Project\python_utils\zkyutils\.pypric
-pip install zkyutils==1.0.17
+pip install zkyutils==1.0.18

@@ -3,3 +3,4 @@ dist
 build
 zkyutils.egg-info
 zkyutils/__pycache__
+zkyutils/logs
